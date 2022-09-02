@@ -4,12 +4,9 @@ from django.db import models
 
 
 class Proveedor(models.Model):
-    nombre_empresa = models.CharField(max_length=50)
-    nombre_viajante = models.CharField(max_length=50)
-    telefono_empresa = models.IntegerField()
-    telefono_viajante = models.IntegerField()
-    email_empresa = models.EmailField()
-    email_viajante = models.EmailField()
+    nombre = models.CharField(max_length=50)
+    telefono = models.IntegerField()
+    email = models.EmailField()
 
 
 class Empleado(models.Model):
