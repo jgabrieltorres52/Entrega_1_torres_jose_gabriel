@@ -26,17 +26,21 @@ def proveedor_form(request):
 
 
 
+def busqueda_proveedor(request):
+
+    return render(request, "app_super/busqueda_proveedor.html")
+
+
+
 def buscar_proveedor(request):
-
-    return render(request, "app_super/buscar_proveedor.html")
-
-
-
-def buscar_prov(request):
-    nombre = request.GET["nombre"]
-    respuesta = f"estoy buscando al proveedor {nombre}"
-    return HttpResponse(respuesta)
-
+    if request.GET["nombre"]:
+        nombre = request.GET["nombre"]
+        nombres = Proveedor.objects.filter(nombre__icontains=nombre) # nombre__icontains=nombre
+        #respuesta = f"estoy buscando al proveedor {nombre}"
+        #return HttpResponse(respuesta)
+        return render(request, "app_super/buscar_proveedor.html", {"nombres":nombres})
+    else:
+        return render(request, "app_super/busqueda_proveedor.html", {"mensaje":"Ingrese un nombre."})
 
 
 def ver_proveedores(request):
@@ -56,7 +60,7 @@ def buscar_empleado(request):
 
 
 
-def buscar_emp(request):
+def busqueda_empleado(request):
 
     pass
 
@@ -80,7 +84,7 @@ def buscar_cliente(request):
 
 
 
-def buscar_cli(request):
+def busqueda_cliente(request):
 
     pass
 

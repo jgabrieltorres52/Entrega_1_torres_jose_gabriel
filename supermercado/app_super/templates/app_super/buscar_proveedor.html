@@ -7,13 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{% url 'buscar_prov' %}" method="GET">
 
-        <input type="text" name="nombre" id="nombre">
+    {% if nombres %}
+    <ul>
+        {% for nom in nombres %}
+            <li>{{nom.nombre}}</li>
+            <li>{{nom.telefono}}</li>
+            <li>{{nom.email}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se encontraron proveedores.</p>
 
-        <input type="submit" value="buscar">
+    {% endif %}
 
-
-    </form>
 </body>
 </html>
