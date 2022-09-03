@@ -22,9 +22,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'ver_prov' %}">Proveedores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'ver_emp' %}">Empleados</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'ver_cli' %}">Clientes</a></li>
                     </ul>
                 </div>
             </div>
@@ -36,12 +36,14 @@
                     <div class="m-4 m-lg-5">
                         <h1 class="display-5 fw-bold">A warm welcome!</h1>
                         <p class="fs-4">Bootstrap utility classes are used to create this jumbotron since the old component has been removed from the framework. Why create custom CSS when you can use utilities?</p>
-                        <a class="btn btn-primary btn-lg" href="#!">Call to action</a>
+                        <a class="btn btn-primary btn-lg" href="https://github.com/cristian-torres-ds/Entrega_1_torres.git">Repositorio GitHub</a>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Page Content-->
+        <!-- Mensaje recibido de la vista, que muestra que se creo un nuevo registro en base de datos, reacomodar!!-->
+        {{ mensaje }}
         <section class="pt-4">
             <div class="container px-lg-5">
                 <!-- Page Features-->

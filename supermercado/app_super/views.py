@@ -12,14 +12,14 @@ def inicio(request):
 def proveedor_form(request):
     if request.method == 'POST':
         mi_formulario = Proveedor_form(request.POST)
-        print(mi_formulario)
-        if mi_formulario.is_valid:
+        if mi_formulario.is_valid():
             informacion = mi_formulario.cleaned_data
+            # cleaned data devuelve un diccionario {'nombre':'abc', 'telefono':123, 'email':abc@xyz}
             proveedor = Proveedor(nombre = informacion['nombre'],
                                   telefono = informacion['telefono'],
                                   email = informacion['email'])
             proveedor.save()
-            return render(request, "")
+            return render(request, "app_super/inicio.html", {"mensaje":"Proveedor creado exitosamente."})
     else:
         mi_formulario = Proveedor_form()
     return render(request, "app_super/add_proveedor.html", {"mi_formulario":mi_formulario})
@@ -28,7 +28,14 @@ def proveedor_form(request):
 
 def buscar_proveedor(request):
 
-    pass
+    return render(request, "app_super/buscar_proveedor.html")
+
+
+
+def buscar_prov(request):
+    nombre = request.GET["nombre"]
+    respuesta = f"estoy buscando al proveedor {nombre}"
+    return HttpResponse(respuesta)
 
 
 
@@ -49,6 +56,12 @@ def buscar_empleado(request):
 
 
 
+def buscar_emp(request):
+
+    pass
+
+
+
 def ver_empleados(request):
 
     pass
@@ -62,6 +75,12 @@ def cliente_form(request):
 
 
 def buscar_cliente(request):
+
+    pass
+
+
+
+def buscar_cli(request):
 
     pass
 
