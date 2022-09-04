@@ -1,4 +1,3 @@
-
 {% extends "app_super/padre.html" %}
 
 {% load static %}
@@ -8,11 +7,12 @@
 {% if nombres %}
     <ul>
         {% for nom in nombres %}
-            <p><li>{{nom.nombre}}</li>
-            <li>{{nom.telefono}}</li>
-            <li>{{nom.email}}</li>
+            <p>
+                <br>Nombre: <b>{{nom.nombre}}</b>
+                <br>Apellido: <b>{{nom.apellido}}</b>
+                <br>Teléfono: <b>{{nom.telefono}}</b>
+                <br>E-mail: <b>{{nom.email}}</b>
             </p>
-            <hr>
         {% endfor %}
     </ul>
 {% else %}

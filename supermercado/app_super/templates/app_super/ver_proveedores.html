@@ -1,0 +1,19 @@
+{% extends "app_super/padre.html" %}
+
+{% load static %}
+
+{% block primero %}
+
+<h2><b>Estos son todos los proveedores:</b></h2>
+    
+    {% for proveedor in lista_proveedores %}
+    <p>
+        <br>Nombre: <b>{{proveedor.nombre}}</b>
+        <br>Teléfono: <b>{{proveedor.telefono}}</b>
+        <br>E-mail: <b>{{proveedor.email}}</b>
+    </p>
+    {% endfor %}
+
+{% endblock %}
+
+

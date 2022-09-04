@@ -3,7 +3,7 @@ from app_super.views import *
 
 
 urlpatterns = [
-    path('', inicio),
+    path('', inicio, name="inicio"),
     path('add_proveedor/', proveedor_form, name="add_proveedor"), # los "name" son para colocar en los botones, en las html's
     path('busqueda_proveedor/', busqueda_proveedor, name="busqueda_proveedor"),
     path('buscar_proveedor/', buscar_proveedor, name="buscar_proveedor"),

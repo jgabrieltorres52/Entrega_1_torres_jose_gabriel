@@ -1,0 +1,20 @@
+{% extends "app_super/padre.html" %}
+
+{% load static %}
+
+{% block primero %}
+
+<h2><b>Estos son todos los empleados:</b></h2>
+    
+    {% for empleado in lista_empleados %}
+    <p>
+        <br>Nombre: <b>{{empleado.nombre}}</b>
+        <br>Apellido: <b>{{empleado.apellido}}</b>
+        <br>Teléfono: <b>{{empleado.telefono}}</b>
+        <br>E-mail: <b>{{empleado.email}}</b>
+        <br>Nacimiento: <b>{{empleado.nacimiento}}</b>
+        <br>Documento: <b>{{empleado.documento}}</b>
+    </p>
+    {% endfor %}
+
+{% endblock %}

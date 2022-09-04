@@ -19,7 +19,7 @@
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-lg-5">
-                <a class="navbar-brand">Supermercado</a>
+                <a class="navbar-brand" href="{% url 'inicio' %}">Supermercado</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -40,13 +40,13 @@
 
                         {% endblock %}
 
+                        <h4><br>{{ mensaje }}</h4>
+
                     </div>
                 </div>
             </div>
         </header>
         <!-- Page Content-->
-        <!-- Mensaje recibido de la vista, que muestra que se creo un nuevo registro en base de datos, reacomodar!!-->
-        {{ mensaje }}
         <section class="pt-4">
             <div class="container px-lg-5">
                 <!-- Page Features-->
@@ -55,8 +55,7 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-person-plus"></i></div>
-                                <a class="btn btn-primary btn-lg" href="{% url 'add_proveedor' %}">Añadir Proveedor</a>
-                                <!-- <p class="mb-0">With Bootstrap 5, we've created a fresh new layout for this template!</p> -->
+                                <div><a class="btn" href="{% url 'add_proveedor' %}"><h3>Añadir Proveedor</h3></a></div>
                             </div>
                         </div>
                     </div>
@@ -64,8 +63,7 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-search"></i></div>
-                                <a class="btn btn-primary btn-lg" href="{% url 'busqueda_proveedor' %}">Buscar Proveedor</a>
-                                <!-- <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p> -->
+                                <div><a class="btn" href="{% url 'busqueda_proveedor' %}"><h3>Buscar Proveedor</h3></a></div>
                             </div>
                         </div>
                     </div>
@@ -73,8 +71,7 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-person-plus"></i></div>
-                                <a class="btn btn-primary btn-lg" href="{% url 'add_cliente' %}">Añadir Cliente</a>
-                                
+                                <div><a class="btn" href="{% url 'add_cliente' %}"><h3>Añadir Cliente</h3></a></div>
                             </div>
                         </div>
                     </div>
@@ -82,8 +79,7 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-search"></i></div>
-                                <a class="btn btn-primary btn-lg" href="{% url 'busqueda_proveedor' %}">Buscar Cliente</a>
-                                
+                                <div><a class="btn" href="{% url 'busqueda_cliente' %}"><h3>Buscar Cliente</h3></a></div>
                             </div>
                         </div>
                     </div>
@@ -91,8 +87,7 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-person-plus"></i></div>
-                                <a class="btn btn-primary btn-lg" href="{% url 'add_empleado' %}">Añadir Empleado</a>
-                                
+                                <div><a class="btn" href="{% url 'add_empleado' %}"><h3>Añadir Empleado</h3></a></div>
                             </div>
                         </div>
                     </div>
@@ -100,8 +95,7 @@
                         <div class="card bg-light border-0 h-100">
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-search"></i></div>
-                                <a class="btn btn-primary btn-lg" href="{% url 'busqueda_empleado' %}">Buscar Empleado</a>
-                                
+                                <div><a class="btn" href="{% url 'busqueda_empleado' %}"><h3>Buscar Empleado</h3></a></div>
                             </div>
                         </div>
                     </div>
@@ -110,7 +104,7 @@
         </section>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Torres-Django 2022</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
