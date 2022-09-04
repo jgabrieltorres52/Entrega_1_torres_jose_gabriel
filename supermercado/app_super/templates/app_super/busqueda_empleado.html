@@ -1,0 +1,20 @@
+
+{% extends "app_super/padre.html" %}
+
+{% load static %}
+
+{% block primero %}
+
+<h3 class="display-5 fw-bold">Buscar empleado.</h3>
+<form action="{% url 'buscar_empleado' %}" method="GET">
+
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="buscar">
+
+</form>
+
+{{ mensaje }}
+
+
+{% endblock %}
